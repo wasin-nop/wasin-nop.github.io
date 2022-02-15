@@ -1,0 +1,165 @@
+body {
+  font-family: "Kanit", sans-serif;
+}
+/*---- Common ----*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.section {
+  margin-bottom: 64px;
+}
+.section-title {
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+/*---- Menu ----*/
+.logo {
+  height: 20px;
+}
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 10;
+}
+.nav-list {
+  display: flex;
+}
+.nav-item {
+  margin-left: 24px;
+}
+/*---- Hero Section ----*/
+.hero-section {
+  background-image: url("../images/hero-background.jpg"); /* Photo by Nicholas Kampouris on Unsplash */
+  background-size: cover;
+  background-position: center center;
+  height: 720px;
+}
+.hero-title {
+  font-size: 64px;
+  font-weight: 600;
+  padding-top: 128px;
+}
+
+/*---- Collection Section ----*/
+.collection-item-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding: 24px;
+}
+.collection-item {
+  background-size: cover;
+  background-position: 50% 82%;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.collection-item-one {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.9),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("../images/classic-collection.jpg"); /* Photo by NordWood Themes on Unsplash */
+}
+
+.collection-item-two {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("../images/sport-collection.jpg"); /* Photo by Tom Radetzki on Unsplash */
+}
+
+.collection-item-three {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/sandal-collection.jpg"); /* Photo by Andy Garza on Unsplash */
+}
+
+.collection-item-four {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("../images/casual-collection.jpg"); /* Photo by Trendest Studio on Unsplash */
+}
+
+/*---- Product Section ----*/
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+.product-item {
+  width: calc(100% / 3);
+  margin-bottom: 16px;
+  padding: 0px 16px;
+  box-sizing: border-box;
+  position: relative;
+}
+.product-item-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* .product-item-image-hidden {
+  display: flex;
+  overflow: hidden;
+  max-height: 220px;
+  align-items: center;
+} */
+.product-item-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border-radius: 18px;
+}
+.product-label {
+  background-color: #f87060;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px;
+  width: fit-content;
+  top: 24px;
+  left: -8px;
+  position: absolute;
+}
+.price {
+  margin-top: 24px;
+}
+
+/*---- About Section ----*/
+.about-content {
+  display: flex;
+}
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.about-image {
+  width: 50%;
+  height: 320px;
+  object-fit: cover;
+  margin-right: 24px;
+  border-radius: 18px;
+}
