@@ -6,8 +6,20 @@ body {
   font-family: "Kanit", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: rgb(40, 40, 40);
+  background-color: #333;
+  color: white;
+  max-width: 900px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -16,7 +28,8 @@ body {
 
 .brand-title {
   font-size: 1.5rem;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   color: aliceblue;
 }
 .brand-title span {
@@ -66,6 +79,29 @@ body {
     display: flex;
   }
   .navbar-links {
+    display: none;
+  }
+}
+/* End of Navbar */
+
+/* Add Your Activity */
+.add-activity-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-activity-image img {
+  max-width: 80%;
+  max-height: 4rem;
+  padding: 1rem;
+  flex: 1 1 auto;
+  /* border: 1px solid white; */
+}
+.add-activity-image img:hover {
+  background-color: #555;
+}
+@media (max-width: 400px) {
+  .add-activity-image {
     display: none;
   }
 }
