@@ -97,11 +97,23 @@ h1 {
   flex: 1 1 auto;
   /* border: 1px solid white; */
 }
+.add-activity-image-bottom {
+  margin-bottom: 1rem;
+}
 .add-activity-image img:hover {
   background-color: #555;
 }
 @media (max-width: 400px) {
-  .add-activity-image {
+  .add-activity-image,
+  .add-activity-form-image {
     display: none;
   }
+}
+.add-activity-form {
+  display: flex;
+}
+.add-activity-form-image {
+  width: 70%;
+  height: auto;
+  border-radius: 5%;
 }
