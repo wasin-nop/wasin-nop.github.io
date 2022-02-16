@@ -11,6 +11,13 @@ a:hover {
   text-decoration: none;
 }
 /* Navbar */
+.navbar-pos-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
 .navbar-css {
   display: flex;
   justify-content: space-between;
@@ -91,11 +98,19 @@ a:hover {
   .row div a img {
     display: none;
   }
+  .form-image {
+    display: none;
+  }
 }
 /* Activity Icon end here */
 
 /* Form */
-
+.submit-button {
+  padding: 5px 10px;
+  background-color: greenyellow;
+  border-radius: 5px;
+  border: none;
+}
 /* footer */
 .footer-fix {
   position: fixed;
