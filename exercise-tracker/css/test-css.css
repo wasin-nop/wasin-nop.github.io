@@ -1,14 +1,23 @@
-.header-footer-bg {
+ิ* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: #333;
-}
-.color-white {
   color: white;
+  /* max-width: 900px; */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-a:link {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 /* Navbar */
 .navbar-css {
@@ -21,9 +30,9 @@ a:hover {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  color: black;
+  color: aliceblue;
 }
-.color-green-yellow {
+.brand-title span {
   color: greenyellow;
 }
 
@@ -35,12 +44,11 @@ a:hover {
 
 .navbar-links li {
   list-style: none;
-  border-radius: 5px;
 }
 
 .navbar-links li a {
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 1rem;
   display: block;
   color: white;
 }
@@ -62,7 +70,7 @@ a:hover {
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: black;
+  background-color: white;
   border-radius: 10px;
 }
 
@@ -77,32 +85,46 @@ a:hover {
 /* End of Navbar */
 
 /* Add Your Activity */
-.row div a img {
-  max-width: 100%;
-  max-height: 6rem;
+.add-activity-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-activity-image img {
+  max-width: 80%;
+  max-height: 4rem;
   padding: 1rem;
   flex: 1 1 auto;
-  border-radius: 5px;
+  /* border: 1px solid white; */
 }
-.row div a img:hover {
-  background-color: rgb(207, 207, 207);
+.add-activity-image-bottom {
+  margin-bottom: 1rem;
+}
+.add-activity-image img:hover {
+  background-color: #555;
 }
 @media (max-width: 400px) {
-  .row img {
+  .add-activity-image,
+  .add-activity-form-image {
     display: none;
   }
 }
-/* Activity Icon end here */
 
-/* Form */
-
-/* footer */
-.text-sm-right a {
-  background-color: greenyellow;
-  text-decoration: none;
-  color: black;
-  border-radius: 5px;
+/* form */
+.add-activity-form {
+  display: flex;
+  justify-content: space-between;
 }
-/* .text-sm-right a:hover {
-  background-color: ;
-} */
+form {
+  width: 70%;
+}
+.add-activity-form-image {
+  width: 30%;
+  /* height: auto; */
+  border-radius: 5%;
+}
+label,
+input,
+option {
+  width: 100%;
+}
