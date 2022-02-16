@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar-css">
         <div class="brand-title"><span>Exer</span>Notion</div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
@@ -60,50 +60,58 @@
             <div><a href="#"><img src="./images/golf (1).png" alt=""></a></div>
             <div><a href="#"><img src="./images/ellipsis.png" alt=""></a></div>
         </div>
+        <!-- Form -->
         <div class="add-activity-form">
-            <form action="#">
-                <div>
-                    <label for="activity-name">Activity Name:</label><br>
-                    <input type="text" id="activity-name" name="activity-name"
-                        placeholder="Keep running in Mt.Everest">
-                </div>
-                <div>
-                    <label for="date">Date:</label><br>
-                    <input type="date" id="date" name="date" value="2022-01-01"
-                        min="2022-01-01" max="2022-12-31">
-                </div>
-                <div>
-                    <label for="activity-type-choice">Activity Type</label><br>
-                    <select name="activity-type-choice"
-                        id="activity-type-choice">
-                        <option value="running">Running</option>
-                        <option value="swimming">Swimming</option>
-                        <option value="cycling">Cycling</option>
-                        <option value="workout">Workout</option>
-                        <option value="meditation">Meditation</option>
-                        <option value="football">Football</option>
-                        <option value="ping-pong">Ping Pong</option>
-                        <option value="tennis">Tennis</option>
-                        <option value="basketball">Basketball</option>
-                        <option value="boxing">Boxing</option>
-                        <option value="golf">Golf</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div><label for="activity-duration">Activity
-                        Duration</label><br>
-                    <input type="text" id="activity-duration"
-                        name="activity-duration" placeholder="hr:min:sec">
-                </div>
+            <div>
+                <form action="#">
+                    <div>
+                        <label for="activity-name">Activity Name:</label><br>
+                        <input type="text" id="activity-name"
+                            name="activity-name"
+                            placeholder="Keep running in Mt.Everest">
+                    </div>
+                    <div>
+                        <label for="date">Date:</label><br>
+                        <input type="date" id="date" name="date"
+                            value="2022-01-01" min="2022-01-01"
+                            max="2022-12-31">
+                    </div>
+                    <div>
+                        <label for="activity-type-choice">Activity
+                            Type</label><br>
+                        <select name="activity-type-choice"
+                            id="activity-type-choice">
+                            <option value="running">Running</option>
+                            <option value="swimming">Swimming</option>
+                            <option value="cycling">Cycling</option>
+                            <option value="workout">Workout</option>
+                            <option value="meditation">Meditation</option>
+                            <option value="football">Football</option>
+                            <option value="ping-pong">Ping Pong</option>
+                            <option value="tennis">Tennis</option>
+                            <option value="basketball">Basketball</option>
+                            <option value="boxing">Boxing</option>
+                            <option value="golf">Golf</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div><label for="activity-duration">Activity
+                            Duration</label><br>
+                        <input type="text" id="activity-duration"
+                            name="activity-duration" placeholder="hr:min:sec">
+                    </div>
 
-                <div><label for="description">Described this journal</label><br>
-                    <textarea name="description" id="description" cols="30"
-                        rows="10"></textarea>
-                </div>
-                <input type="submit" value="Add Activity">
+                    <div><label for="description">Described this
+                            journal</label><br>
+                        <textarea name="description" id="description" cols="30"
+                            rows="10"></textarea>
+                    </div>
+                    <input type="submit" value="Add Activity">
 
-            </form>
-            <div><img class="add-activity-form-image"
+                </form>
+            </div>
+            <div>
+                <img class="add-activity-form-image"
                     src="./images/running_at_sunset-1296x728-header.jpg" alt="">
             </div>
         </div>
