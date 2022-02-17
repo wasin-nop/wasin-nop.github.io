@@ -11,13 +11,13 @@ a:hover {
   text-decoration: none;
 }
 /* Navbar */
-.navbar-pos-fix {
+/* .navbar-pos-fix {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
-}
+} */
 .navbar-css {
   display: flex;
   justify-content: space-between;
@@ -112,12 +112,12 @@ a:hover {
   border: none;
 }
 /* footer */
-.footer-fix {
+/* .footer-fix {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-}
+} */
 .text-sm-right a {
   background-color: greenyellow;
   text-decoration: none;
