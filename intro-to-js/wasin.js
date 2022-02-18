@@ -22,14 +22,13 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 function loadProfile() {
-  const profileName = prompt("Please enter your name", "Bond, James Bond");
-  if (profileName != null) {
-    document.getElementById("my-name").innerHTML =
-      capitalizeFirstLetter(profileName);
-  }
-  const province = prompt("What is your state/province", "Bangkok");
-  if (province != null) {
-    document.getElementById("my-province").innerHTML =
-      capitalizeFirstLetter(province);
-  }
+  // const profileName = prompt("Please enter your name", "Bond, James Bond");
+  // if (profileName != null) {
+  document.getElementById("my-name").innerHTML = capitalizeFirstLetter(`Wasin`);
+  // }
+  // const province = prompt("What is your state/province", "Bangkok");
+  // if (province != null) {
+  document.getElementById("my-province").innerHTML =
+    capitalizeFirstLetter(`Bangkok`);
+  // }
 }
