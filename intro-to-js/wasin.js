@@ -1,7 +1,7 @@
 function askMyName() {
   const name = prompt("Please enter your name", "Bond, James Bond");
   if (name != null) {
-    document.getElementById("h1-message").innerHTML = "My name is " + name;
+    document.getElementById("h1-message").innerHTML = "My username is " + name;
   }
 }
 
@@ -31,4 +31,35 @@ function loadProfile() {
   document.getElementById("my-province").innerHTML =
     capitalizeFirstLetter(`Bangkok`);
   // }
+}
+
+// const laughTale {
+//   member: 5,
+//   memberName: ['Bright','Fen','Opaul','Now','Champ']
+
+//
+function calRectangleArea(length, width) {
+  return length * width;
+}
+console.log(calRectangleArea(8, 2));
+
+function calTriangleArea(base, height) {
+  return 0.5 * base * height;
+}
+console.log(calTriangleArea(8, 2));
+
+function payWithPaotang(priceOfProduct, dailyLimit) {
+  let remaining = 1200;
+  const toCashPay = priceOfProduct / 2;
+  if (toCashPay > dailyLimit) {
+    return priceOfProduct - dailyLimit;
+  } else {
+    return toCashPay;
+  }
+}
+
+function calPayment(payment) {
+  const transactionFee = 3;
+  const interestFee = payment * 0.01;
+  return payment + transactionFee + interestFee;
 }
