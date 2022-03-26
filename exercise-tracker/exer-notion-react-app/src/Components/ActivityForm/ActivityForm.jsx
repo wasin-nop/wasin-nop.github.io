@@ -3,19 +3,42 @@ import "./ActivityForm.css";
 
 const ActivityForm = (props) => {
   const [activityName, setActivityName] = useState("");
-  const [activityDate, setActivityDate] = useState("2022-01-01");
+  const [activityDate, setActivityDate] = useState("");
   const [activityDuration, setActivityDuration] = useState("");
   const [activityDescription, setActivityDescription] = useState("");
-  const handleChange = (e) => {
+  const [value, setValue] = useState({ value: "" });
+
+  const handleChangeActivityName = (e) => {
+    setActivityName(e.target.value);
+  };
+
+  const handleChangeActivityDate = (e) => {
+    setActivityDate(e.target.value);
+  };
+
+  const handleChangeActivityType = (e) => {
     props.setActivityType(e.target.value);
   };
+
+  const handleChangeActivityDuration = (e) => {
+    setActivityDuration(e.target.value);
+  };
+
+  const handleChangeActivityDescription = (e) => {
+    setActivityDescription(e.target.value);
+  };
+
+  // const handleSubmit = (e) => {
+  //   alert("A name was submitted: " + setValue());
+  //   e.preventDefault();
+  // };
 
   return (
     <main className="container">
       <div className="form-container">
         <div className="form-width">
           <form>
-            <div className="form-group">
+            <div>
               <label for="activity-name" className="input-topic">
                 Activity Name:
               </label>
@@ -27,7 +50,7 @@ const ActivityForm = (props) => {
                 name="activity-name"
                 placeholder="Keep running in Mt.Everest"
                 value={activityName}
-                onChange={(e) => setActivityName(e.target.value)}
+                onChange={handleChangeActivityName}
               />
             </div>
             <div>
@@ -44,9 +67,10 @@ const ActivityForm = (props) => {
                 min="2022-01-01"
                 // max="2022-12-31"
                 value={activityDate}
+                onChange={handleChangeActivityDate}
               />
             </div>
-            <div className="form-group">
+            <div>
               <label for="activity-type-choice" className="input-topic">
                 Activity Type
               </label>
@@ -56,7 +80,7 @@ const ActivityForm = (props) => {
                 id="activity-type-choice"
                 name="activity-type-choice"
                 value={props.activityType}
-                onChange={handleChange}
+                onChange={handleChangeActivityType}
               >
                 <option value="running">Running</option>
                 <option value="swimming">Swimming</option>
@@ -84,10 +108,10 @@ const ActivityForm = (props) => {
                 name="activity-duration"
                 placeholder="hr:min:sec"
                 value={activityDuration}
-                onChange={(e) => setActivityDuration(e.target.value)}
+                onChange={handleChangeActivityDuration}
               />
             </div>
-            <div className="form-group">
+            <div>
               <label for="description" className="input-topic">
                 Described this journal
               </label>
@@ -98,7 +122,7 @@ const ActivityForm = (props) => {
                 name="description"
                 rows="3"
                 value={activityDescription}
-                onChange={(e) => setActivityDescription(e.target.value)}
+                onChange={handleChangeActivityDescription}
               ></textarea>
             </div>
             <a href="#">
