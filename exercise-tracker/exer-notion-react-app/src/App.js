@@ -1,24 +1,27 @@
-// import logo from "./logo.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import ActivityIcon from "./Components/ActivityIcon/ActivityIcon.jsx";
-import ActivityForm from "./Components/ActivityForm/ActivityForm";
-import Footer from "./Components/Footer/Footer";
+// import Navbar from "./Components/Navbar/Navbar";
+// import Footer from "./Components/Footer/Footer";
+import Form from "./Page/Form.jsx";
+import Record from "./Page/Record";
 
-function App() {
+const App = () => {
   const [activityType, setActivityType] = useState("running");
   return (
-    <>
-      <Navbar />
-      <ActivityIcon setActivityType={setActivityType} />
-      <ActivityForm
-        activityType={activityType}
-        setActivityType={setActivityType}
-      />
-      <Footer />
-    </>
+    // <>
+    //   <Navbar />
+    //   <Form />
+    //   <Footer />
+    // </>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="record" element={<Record />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

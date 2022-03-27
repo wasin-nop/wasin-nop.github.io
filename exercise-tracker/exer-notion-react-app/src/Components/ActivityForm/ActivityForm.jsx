@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ActivityForm.css";
 
 const ActivityForm = (props) => {
@@ -6,7 +6,11 @@ const ActivityForm = (props) => {
   const [activityDate, setActivityDate] = useState("");
   const [activityDuration, setActivityDuration] = useState("");
   const [activityDescription, setActivityDescription] = useState("");
-  const [value, setValue] = useState({ value: "" });
+  const [isNameInvalid, setIsNameInvalid] = useState(false);
+  const [isDurationInvalid, setIsDurationInvalid] = useState(false);
+  const [isDescriptionInvalid, setIsDescriptionInvalid] = useState(false);
+
+  // const [value, setValue] = useState({ value: "" });
 
   const handleChangeActivityName = (e) => {
     setActivityName(e.target.value);
@@ -32,12 +36,40 @@ const ActivityForm = (props) => {
   //   alert("A name was submitted: " + setValue());
   //   e.preventDefault();
   // };
+  useEffect(() => {
+    if (activityName.length > 3 && activityName !== "") {
+      setIsNameInvalid(true);
+    } else {
+      setIsNameInvalid(false);
+    }
+  }, [activityName]);
+
+  useEffect(() => {
+    if (activityDuration > 0) {
+      setIsDurationInvalid(true);
+    } else {
+      setIsDurationInvalid(false);
+    }
+  }, [activityDuration]);
+
+  useEffect(() => {
+    if (
+      activityDescription.length > 9 &&
+      activityDescription !== "" &&
+      activityDescription.length < 139
+    ) {
+      setIsDescriptionInvalid(true);
+    } else {
+      setIsDescriptionInvalid(false);
+    }
+  }, [activityDescription]);
 
   return (
     <main className="container">
       <div className="form-container">
         <div className="form-width">
           <form>
+            {/*Activity Name */}
             <div>
               <label for="activity-name" className="input-topic">
                 Activity Name:
@@ -48,7 +80,8 @@ const ActivityForm = (props) => {
                 className="form-control"
                 id="activity-name"
                 name="activity-name"
-                placeholder="Keep running in Mt.Everest"
+                placeholder="Not Empty and longer than 4 characters" //Keep running in Mt.Everest
+                isNameInvalid={isNameInvalid}
                 value={activityName}
                 onChange={handleChangeActivityName}
               />
@@ -70,6 +103,9 @@ const ActivityForm = (props) => {
                 onChange={handleChangeActivityDate}
               />
             </div>
+            {/*End Activity Name */}
+
+            {/*Activity type */}
             <div>
               <label for="activity-type-choice" className="input-topic">
                 Activity Type
@@ -96,6 +132,9 @@ const ActivityForm = (props) => {
                 <option value="other">Other</option>
               </select>
             </div>
+            {/* End Activity type */}
+
+            {/* Activity Duration */}
             <div>
               <label for="activity-duration" className="input-topic">
                 Activity Duration
@@ -107,10 +146,14 @@ const ActivityForm = (props) => {
                 id="activity-duration"
                 name="activity-duration"
                 placeholder="hr:min:sec"
+                isDurationInvalid={isDurationInvalid}
                 value={activityDuration}
                 onChange={handleChangeActivityDuration}
               />
             </div>
+            {/* ENDActivity Duration */}
+
+            {/* Activity Description */}
             <div>
               <label for="description" className="input-topic">
                 Described this journal
@@ -121,6 +164,8 @@ const ActivityForm = (props) => {
                 id="description"
                 name="description"
                 rows="3"
+                placeholder="Not Empty and longer than 10 characters but less than 140 characters"
+                isDescriptionInvalid={isDescriptionInvalid}
                 value={activityDescription}
                 onChange={handleChangeActivityDescription}
               ></textarea>
@@ -133,6 +178,7 @@ const ActivityForm = (props) => {
                 value="Submit"
               />
             </a>
+            {/* End Activity Description */}
           </form>
         </div>
         <div>

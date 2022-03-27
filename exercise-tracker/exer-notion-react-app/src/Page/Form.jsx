@@ -1,13 +1,14 @@
 // import logo from "./logo.svg";
 import { useState } from "react";
+
 import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 import ActivityIcon from "../Components/ActivityIcon/ActivityIcon.jsx";
 import ActivityForm from "../Components/ActivityForm/ActivityForm";
-import Footer from "../Components/Footer/Footer";
 
 import "../App.css";
 
-function App() {
+const Form = () => {
   const [activityType, setActivityType] = useState("running");
   return (
     <>
@@ -20,6 +21,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
-export default App;
+export default Form;
