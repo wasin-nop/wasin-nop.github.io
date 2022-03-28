@@ -15,16 +15,17 @@
 
 * {
   font-family: "Poppins", sans-serif;
-  /* margin: 0;
-  padding: 0; */
   box-sizing: border-box;
-  /* border: red solid 1px; */
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+body * {
+  transition: 0.3s;
 }
 
 h1,
@@ -152,6 +153,10 @@ ul {
   -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   margin: 5px;
+}
+
+#navigation a {
+  color: var(--mainText);
 }
 
 #navigation {
@@ -296,6 +301,7 @@ ul {
 }
 #social_img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .post-wrapper {
@@ -311,6 +317,11 @@ ul {
   -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+.post,
+.thumbnail,
+.post-preview {
+  border-radius: 5px;
 }
 
 .thumbnail {
