@@ -11,7 +11,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/458f4e7f83.js"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,9 +31,9 @@
                         <div id="dot-2" class="browser-dot"></div>
                         <div id="dot-3" class="browser-dot"></div>
                     </div>
-                    <ul id="navigation">
+                    <!-- <ul id="navigation">
                         <li><a href="#">Contact</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="left-column">
                     <img id="profile_pic" src="./img/me.jpg" alt="">
@@ -65,19 +68,112 @@
     </section>
     <section class="s2">
         <div class="main-container">
-            About
+
+            <div class="about-wrapper">
+                <div class="about-me">
+                    <h4>More about me</h4>
+
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Similique, earum.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi, eveniet?</p>
+
+                    <hr>
+                    <h4>SKILLS</h4>
+
+                    <p>Wannabe Junior Front-end Developer <a
+                            href="./src/Wasin_Nopsuwan_CV.pdf"
+                            target="_blank">Download
+                            Resume</a>
+                    </p>
+
+                    <div id="skills">
+                        <ul>
+                            <li>HTML</li>
+                            <li>JavaScript ES6</li>
+                        </ul>
+                        <ul>
+                            <li>Pure CSS / Bootstrap5</li>
+                            <li>React</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="social-links">
+                    <img id="social_img" src="./img/hackerman.jpg"
+                        alt="hackerman">
+                    <h4>Find me on <a href="" target="_blank">LinkedIn</a> & <a
+                            href="" target="_blank">
+                            Github</a></h4>
+                </div>
+            </div>
+
         </div>
     </section>
     <section class="s1">
         <div class="main-container">
-            Portfolio
+            <h3 style="text-align:center;">Some of my past projects</h3>
+            <div class="post-wrapper">
+                <div class="post">
+                    <img class="thumbnail" src="./img/mystagram.png" alt="">
+                    <div class="post-preview">
+                        <h6 class="post-title">Search Image in Unsplash</h6>
+                        <p class="post-intro"> Image
+                            search website using unsplash api
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img class="thumbnail"
+                        src="./img/responsive-react-exercise-tracker.png"
+                        alt="">
+                    <div class="post-preview">
+                        <h6 class="post-title">Exercise
+                            Tracker Website</h6>
+                        <p class="post-intro">Design a responsive website via
+                            react use to track user exercise activity
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img class="thumbnail" src="./img/jamming.png" alt="">
+                    <div class="post-preview">
+                        <h6 class="post-title">Search & Create Playlist Website
+                        </h6>
+                        <p class="post-intro">Single webpage using web-api
+                            spotify via react
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="s2">
-        <div class="main-container">
-            Contact
-        </div>
-    </section>
+
+
+    <footer class="s2">
+        <div class="main-container footer-container">
+            <h3>Get In Touch</h3>
+            <!-- <p>Hope to work with you soon!</p> -->
+            <div class="footer-contact">
+                <div>
+                    <ul>
+                        <li>Email: wasin.nsw@gmail.com</li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+
+                        <li>Phone Number: +66908969934</li>
+                        <li><a href="#">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+    </footer>
 </body>
 
 </html>
