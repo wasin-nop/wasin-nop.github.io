@@ -17,7 +17,9 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   margin: 0;
@@ -113,7 +115,7 @@ ul {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3em 30em;
+  grid-template-rows: 3em 35em;
   grid-template-areas:
     "nav-wrapper nav-wrapper"
     "left-column right-column";
@@ -173,6 +175,8 @@ ul {
   grid-area: left-column;
   padding-top: 50px;
   padding-bottom: 50px;
+  display: grid;
+  align-content: center;
 }
 
 #profile_pic {
@@ -234,8 +238,8 @@ ul {
   grid-area: right-column;
   display: grid;
   align-content: center;
-
-  margin-top: -100px;
+  position: relative;
+  /* margin-top: -100px; */
 }
 
 #preview-shadow {
@@ -244,6 +248,8 @@ ul {
   height: 180px;
   padding-left: 30px;
   padding-top: 30px;
+  position: relative;
+  bottom: 125px;
 }
 
 #preview {
@@ -293,10 +299,10 @@ ul {
   justify-content: space-evenly;
   background-color: var(--previewShadow);
 }
-.social-links {
+.about-me-container {
   display: grid;
   align-content: center;
-  text-align: center;
+  /* text-align: center; */
   object-fit: cover;
 }
 #social_img {
@@ -349,8 +355,11 @@ ul {
 .footer-contact {
   display: flex;
   justify-content: center;
-  align-items: center;
+
   padding: 10px;
+}
+.footer-container {
+  align-items: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -362,16 +371,33 @@ ul {
 @media screen and (max-width: 800px) {
   .intro-wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: 3em 30em;
+    grid-template-rows: 3em 55em;
     grid-template-areas:
       "nav-wrapper"
       "left-column "
       "right-column";
   }
-
+  .left-column {
+    align-content: flex-start;
+  }
   .right-column {
     justify-content: center;
     padding-bottom: 120px;
-    margin-top: auto;
+    margin-top: -500px;
+  }
+
+  #preview,
+  #post-preview {
+    margin-left: -5px;
+  }
+  #preview-shadow {
+    bottom: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer-container,
+  .footer-contact {
+    flex-direction: column;
   }
 }
