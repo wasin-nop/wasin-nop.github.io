@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
-  const toggleButton = document.getElementsByClassName("toggle-button")[0];
+  // const toggleButton = document.getElementsByClassName("toggle-button")[0];
   const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 
   const handleClick = (e) => {

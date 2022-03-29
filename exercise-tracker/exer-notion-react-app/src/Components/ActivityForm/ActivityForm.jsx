@@ -80,7 +80,7 @@ const ActivityForm = (props) => {
                 className="form-control"
                 id="activity-name"
                 name="activity-name"
-                placeholder="Not Empty and longer than 4 characters" //Keep running in Mt.Everest
+                placeholder="Keep running in Mt.Everest" // Not Empty and longer than 4 characters
                 isNameInvalid={isNameInvalid}
                 value={activityName}
                 onChange={handleChangeActivityName}
@@ -164,7 +164,10 @@ const ActivityForm = (props) => {
                 id="description"
                 name="description"
                 rows="3"
-                placeholder="Not Empty and longer than 10 characters but less than 140 characters"
+                placeholder="I'm so tired but my friend keep running ... so I have to catch up"
+                // Not Empty and longer than 10 characters but less than 140 characters
+                this
+                monster
                 isDescriptionInvalid={isDescriptionInvalid}
                 value={activityDescription}
                 onChange={handleChangeActivityDescription}
