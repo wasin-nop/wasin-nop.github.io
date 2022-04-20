@@ -292,6 +292,8 @@ ul {
   padding-bottom: 50px;
   padding-top: 50px;
   gap: 100px;
+  margin-left: 2rem;
+  margin-right: 1.5rem;
 }
 
 #skills {
@@ -308,6 +310,12 @@ ul {
 #social_img {
   width: 100%;
   border-radius: 5px;
+}
+
+div.experience h5,
+div.experience h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .post-wrapper {
